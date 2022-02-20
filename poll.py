@@ -47,7 +47,7 @@ def build_csv_dict(ticker_lst):
     for ticker in ticker_lst:
         test, _ = ts.get_daily(ticker, outputsize='full')
         cols = ['open', 'high', 'low', 'close', 'volume']
-        file_loc = "SP500_data/" + ticker
+        file_loc = "SP500_data_daily/daily_data" + ticker
         test.to_csv(file_loc)
 
 if __name__ == "__main__":
